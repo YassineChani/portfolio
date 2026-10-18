@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yassine Chani | Expert en Développement Web & IA</title>
+  <meta name="description" content="Portfolio de Yassine Chani - Expert Full Stack Developer & Intelligence Artificielle. Plus de 5 ans d'expérience." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans / Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS CDN with configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f4f7fb',
+              100: '#e8eff7',
+              500: '#1e293b',
+              900: '#090d16',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-[#fafafa] dark:bg-[#0c0f17] text-neutral-900 dark:text-neutral-100 font-sans transition-colors duration-300 min-h-screen flex flex-col antialiased selection:bg-neutral-900 selection:text-white dark:selection:bg-white dark:selection:text-black">
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-[#0c0f17]/80 border-b border-neutral-200/70 dark:border-neutral-800/80 transition-colors">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="text-2xl font-black tracking-tight text-neutral-900 dark:text-white flex items-center gap-1 group">
+        <span>YC</span><span class="text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">.</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-[15px] font-medium text-neutral-600 dark:text-neutral-300">
+        <a href="#hero" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Home</a>
+        <a href="#about" class="hover:text-neutral-900 dark:hover:text-white transition-colors">About</a>
+        <a href="#experience" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Experience</a>
+        <a href="#skills" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Projects</a>
+        <a href="#contact" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Action & Theme Toggle -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" aria-label="Toggle Dark/Light Mode" class="p-2.5 rounded-full text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+          <!-- Moon Icon (Light Mode) -->
+          <svg id="moon-icon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <!-- Sun Icon (Dark Mode) -->
+          <svg id="sun-icon" class="w-5 h-5 hidden dark:block text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Trigger -->
+        <button id="mobile-menu-btn" aria-label="Open menu" class="md:hidden p-2 rounded-lg text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pt-3 pb-6 bg-white dark:bg-[#0c0f17] border-b border-neutral-200 dark:border-neutral-800 space-y-3">
+      <a href="#hero" class="block py-2 text-base font-medium text-neutral-700 dark:text-neutral-200 mobile-nav-link">Home</a>
+      <a href="#about" class="block py-2 text-base font-medium text-neutral-700 dark:text-neutral-200 mobile-nav-link">About</a>
+      <a href="#experience" class="block py-2 text-base font-medium text-neutral-700 dark:text-neutral-200 mobile-nav-link">Experience</a>
+      <a href="#skills" class="block py-2 text-base font-medium text-neutral-700 dark:text-neutral-200 mobile-nav-link">Skills</a>
+      <a href="#projects" class="block py-2 text-base font-medium text-neutral-700 dark:text-neutral-200 mobile-nav-link">Projects</a>
+      <a href="#contact" class="block py-2 text-base font-medium text-neutral-700 dark:text-neutral-200 mobile-nav-link">Contact</a>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero" class="relative max-w-6xl mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32 flex-1 flex items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
+      
+      <!-- Left Content -->
+      <div class="lg:col-span-7 space-y-7 order-2 lg:order-1">
+        <!-- Tag / Kicker -->
+        <div class="inline-block">
+          <span class="text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-sky-600 dark:text-sky-400">
+            DEVELOPMENT &bull; ARTIFICIAL INTELLIGENCE &bull; ARCHITECTURE
+          </span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-[1.12]">
+          Hi, I'm <span class="text-neutral-900 dark:text-white">Yassine Chani.</span>
+        </h1>
+
+        <!-- Bio Paragraph -->
+        <p class="text-lg md:text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-xl">
+          Expert Full Stack Developer &amp; IA, spécialisé dans la conception d'applications web performantes et l'intégration de solutions IA en production. Plus de 5 ans d'expérience au service de clients internationaux exigeants.
+        </p>
+
+        <!-- CTA Buttons (Exact match to design) -->
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <!-- View Resume / CV -->
+          <a href="#experience" class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-950 font-semibold text-sm transition-all duration-200 hover:opacity-90 hover:scale-[1.02] shadow-sm">
+            <span>View Resume</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+
+          <!-- Let's Talk CTA -->
+          <a href="#contact" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white dark:bg-neutral-800/90 text-neutral-800 dark:text-neutral-100 font-semibold text-sm border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-all duration-200 hover:scale-[1.02] shadow-sm">
+            Let's Talk
+          </a>
+        </div>
+
+        <!-- Quick highlights badges -->
+        <div class="pt-4 flex flex-wrap items-center gap-6 text-sm text-neutral-500 dark:text-neutral-400">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Disponible pour de nouveaux projets</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Casablanca, Maroc &amp; À distance</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Circular Avatar Profile (Match Image with high aesthetics) -->
+      <div class="lg:col-span-5 flex justify-center order-1 lg:order-2">
+        <div class="relative group">
+          <!-- Subtle Glow Effect -->
+          <div class="absolute -inset-1 rounded-full bg-gradient-to-tr from-sky-500 to-indigo-500 opacity-20 blur-xl group-hover:opacity-30 transition duration-500"></div>
+
+          <!-- Main circular frame with picture or vector avatar -->
+          <div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden bg-neutral-200 dark:bg-neutral-800 ring-8 ring-white dark:ring-neutral-900 shadow-2xl flex items-center justify-center">
+            
+            <!-- Profile photo -->
+            <div id="profile-img-container" class="w-full h-full relative overflow-hidden">
+              <img id="avatar-image" src="profile.png?v=2" alt="Yassine Chani" class="w-full h-full object-cover object-[50%_18%] transition-transform duration-500 hover:scale-105" onerror="this.style.display='none'; document.getElementById('avatar-fallback').classList.remove('hidden');" />
+              
+              <!-- Fallback if image fails to load -->
+              <div id="avatar-fallback" class="hidden w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-neutral-900 to-neutral-700 text-white">
+                <span class="text-6xl font-bold font-display">YC</span>
+                <span class="text-xs uppercase tracking-widest mt-2 text-neutral-300">Yassine Chani</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT & FORMATION ==================== -->
+  <section id="about" class="py-20 bg-white dark:bg-[#10141f] border-y border-neutral-200/70 dark:border-neutral-800/80">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+        <div>
+          <span class="text-xs font-bold tracking-[0.2em] uppercase text-sky-600 dark:text-sky-400">PROFIL &amp; PARCOURS</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-neutral-900 dark:text-white mt-1">À propos de moi</h2>
+        </div>
+        <p class="text-neutral-500 dark:text-neutral-400 text-sm max-w-md">
+          Formateur et ingénieur passionné par la résolution de problématiques d'architecture et le déploiement de modèles intelligents en temps réel.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Formation & Diplômes -->
+        <div class="bg-neutral-50 dark:bg-neutral-900/60 p-7 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 space-y-6">
+          <div class="flex items-center gap-3 text-neutral-900 dark:text-white font-bold text-lg">
+            <span class="p-2.5 rounded-xl bg-neutral-200/70 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+            </span>
+            <h3>Diplômes &amp; Formations</h3>
+          </div>
+
+          <div class="space-y-5 text-sm">
+            <div class="relative pl-5 border-l-2 border-neutral-300 dark:border-neutral-700">
+              <span class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-sky-500"></span>
+              <h4 class="font-bold text-neutral-900 dark:text-neutral-100">Ingénieur Informatique</h4>
+              <p class="text-neutral-500 dark:text-neutral-400 text-xs">2021 — 2026 &bull; EHEI Oujda, Morocco</p>
+            </div>
+            
+            <div class="relative pl-5 border-l-2 border-neutral-300 dark:border-neutral-700">
+              <span class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-neutral-400"></span>
+              <h4 class="font-bold text-neutral-900 dark:text-neutral-100">Classes Préparatoires Intégrées (CPI)</h4>
+              <p class="text-neutral-500 dark:text-neutral-400 text-xs">2021 — 2023 &bull; EHEI Oujda</p>
+            </div>
+
+            <div class="relative pl-5 border-l-2 border-neutral-300 dark:border-neutral-700">
+              <span class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-neutral-400"></span>
+              <h4 class="font-bold text-neutral-900 dark:text-neutral-100">Baccalauréat</h4>
+              <p class="text-neutral-500 dark:text-neutral-400 text-xs">2021 &bull; EZZARKTOUNI Oujda</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Langues & Soft Skills -->
+        <div class="bg-neutral-50 dark:bg-neutral-900/60 p-7 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 space-y-6">
+          <div class="flex items-center gap-3 text-neutral-900 dark:text-white font-bold text-lg">
+            <span class="p-2.5 rounded-xl bg-neutral-200/70 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+            </span>
+            <h3>Langues &amp; Soft Skills</h3>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span>Français</span>
+                <span class="text-neutral-400">Courant / Pro</span>
+              </div>
+              <div class="w-full bg-neutral-200 dark:bg-neutral-700 h-2 rounded-full overflow-hidden">
+                <div class="bg-neutral-900 dark:bg-white h-full w-[95%]"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span>Anglais</span>
+                <span class="text-neutral-400">Technique &amp; Collaboratif (USA)</span>
+              </div>
+              <div class="w-full bg-neutral-200 dark:bg-neutral-700 h-2 rounded-full overflow-hidden">
+                <div class="bg-neutral-900 dark:bg-white h-full w-[90%]"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span>Espagnol</span>
+                <span class="text-neutral-400">Intermédiaire</span>
+              </div>
+              <div class="w-full bg-neutral-200 dark:bg-neutral-700 h-2 rounded-full overflow-hidden">
+                <div class="bg-neutral-900 dark:bg-white h-full w-[65%]"></div>
+              </div>
+            </div>
+
+            <div class="pt-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-neutral-400 block mb-2">Soft Skills</span>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-neutral-800 text-xs font-medium border border-neutral-200 dark:border-neutral-700">Esprit d'équipe</span>
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-neutral-800 text-xs font-medium border border-neutral-200 dark:border-neutral-700">Communication</span>
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-neutral-800 text-xs font-medium border border-neutral-200 dark:border-neutral-700">Autonome</span>
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-neutral-800 text-xs font-medium border border-neutral-200 dark:border-neutral-700">Rigoureux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chiffres & Impact -->
+        <div class="bg-neutral-50 dark:bg-neutral-900/60 p-7 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 text-neutral-900 dark:text-white font-bold text-lg mb-6">
+              <span class="p-2.5 rounded-xl bg-neutral-200/70 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </span>
+              <h3>Points Forts</h3>
+            </div>
+            
+            <ul class="space-y-4 text-sm text-neutral-600 dark:text-neutral-300">
+              <li class="flex items-start gap-2.5">
+                <svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span><strong>5+ ans</strong> d'expérience en développement Full Stack de pointe (Front, Back &amp; Scalabilité).</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>Expertise pratique en <strong>intégration de modèles d'IA</strong> (LLMs, Computer Vision, APIs ML) en production.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>Formateur académique chevronné : pédagogie orientée <strong>Clean Code</strong> &amp; projets concrets.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-between text-xs text-neutral-500">
+            <span>Permis B &bull; Disponible à l'international</span>
+            <span class="font-bold text-neutral-800 dark:text-neutral-200">Casablanca</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== EXPERIENCES ==================== -->
+  <section id="experience" class="py-24 max-w-6xl mx-auto px-6">
+    <div class="mb-16">
+      <span class="text-xs font-bold tracking-[0.2em] uppercase text-sky-600 dark:text-sky-400">CARRIÈRE &amp; RÉALISATIONS</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-neutral-900 dark:text-white mt-1">Expériences professionnelles</h2>
+    </div>
+
+    <div class="space-y-12 relative before:absolute before:inset-0 before:left-3 md:before:left-4 before:w-0.5 before:bg-neutral-200 dark:before:bg-neutral-800">
+      
+      <!-- Experience 1: Gloria USA -->
+      <div class="relative pl-10 md:pl-12 group">
+        <!-- Dot marker -->
+        <span class="absolute left-1.5 md:left-2.5 top-1.5 -translate-x-1/2 w-4 h-4 rounded-full bg-neutral-900 dark:bg-white border-4 border-white dark:border-[#0c0f17] group-hover:scale-125 transition-transform duration-200"></span>
+
+        <div class="bg-white dark:bg-neutral-900/60 p-6 md:p-8 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all shadow-sm">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
+            <div>
+              <h3 class="text-xl font-bold text-neutral-900 dark:text-white">Technical Expert</h3>
+              <p class="text-sky-600 dark:text-sky-400 font-semibold text-sm">Gloria (United States) &bull; À distance</p>
+            </div>
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 self-start md:self-auto">
+              Mars 2023 — Mai 2025
+            </span>
+          </div>
+          
+          <ul class="space-y-2.5 text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed mt-4 list-disc pl-4">
+            <li><strong>Optimisation Full Stack &amp; Architecture :</strong> Analyse approfondie de l'architecture existante, identification des goulots d'étranglement de performance et mise en place de solutions scalables.</li>
+            <li><strong>Intégration de solutions IA :</strong> Déploiement de fonctionnalités basées sur l'intelligence artificielle directement dans les produits en production sans régression.</li>
+            <li><strong>Stabilité en production :</strong> Diagnostic et résolution de bugs critiques avec identification systématique de causes racines.</li>
+            <li><strong>Collaboration internationale (USA) :</strong> Synchronisation quotidienne en anglais technique avec l'équipe américaine et gestion fluide du décalage horaire.</li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2 mt-5 pt-4 border-t border-neutral-100 dark:border-neutral-800/80">
+            <span class="text-xs px-2.5 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 font-medium">Full Stack</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 font-medium">AI Integration</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 font-medium">Scalability</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 font-medium">Agile / US Team</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 2: Professeur Dev Web -->
+      <div class="relative pl-10 md:pl-12 group">
+        <span class="absolute left-1.5 md:left-2.5 top-1.5 -translate-x-1/2 w-4 h-4 rounded-full bg-neutral-900 dark:bg-white border-4 border-white dark:border-[#0c0f17] group-hover:scale-125 transition-transform duration-200"></span>
+
+        <div class="bg-white dark:bg-neutral-900/60 p-6 md:p-8 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all shadow-sm">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
+            <div>
+              <h3 class="text-xl font-bold text-neutral-900 dark:text-white">Professeur de Développement Web &amp; Full Stack</h3>
+              <p class="text-sky-600 dark:text-sky-400 font-semibold text-sm">École des Hautes Études d'Ingénierie &bull; Casablanca, Maroc</p>
+            </div>
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 self-start md:self-auto">
+              Depuis 2021
+            </span>
+          </div>
+
+          <ul class="space-y-2.5 text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed mt-4 list-disc pl-4">
+            <li><strong>Enseignement de la stack web moderne :</strong> Conception de modules avancés : HTML5/CSS3, JavaScript (ES6+), React, Vue.js, Node.js, Python/Django, PHP.</li>
+            <li><strong>Encadrement de projets réels :</strong> Accompagnement complet de bout en bout (cahier des charges, architecture, Git, déploiement cloud et debugging).</li>
+            <li><strong>Transmission des standards de l'industrie :</strong> Clean Code, design patterns (MVC), revues de code entre pairs et workflows Git professionnels.</li>
+            <li><strong>Veille technologique continue :</strong> Intégration de l'IA générative et des nouveaux frameworks dans le cursus académique.</li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2 mt-5 pt-4 border-t border-neutral-100 dark:border-neutral-800/80">
+            <span class="text-xs px-2.5 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 font-medium">Pédagogie</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 font-medium">React &amp; Vue.js</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 font-medium">Node.js / Django</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 font-medium">Clean Code</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 3: Freelance TGS Toronto -->
+      <div class="relative pl-10 md:pl-12 group">
+        <span class="absolute left-1.5 md:left-2.5 top-1.5 -translate-x-1/2 w-4 h-4 rounded-full bg-neutral-900 dark:bg-white border-4 border-white dark:border-[#0c0f17] group-hover:scale-125 transition-transform duration-200"></span>
+
+        <div class="bg-white dark:bg-neutral-900/60 p-6 md:p-8 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all shadow-sm">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
+            <div>
+              <h3 class="text-xl font-bold text-neutral-900 dark:text-white">Expert Développeur Web &amp; AI — Freelance</h3>
+              <p class="text-sky-600 dark:text-sky-400 font-semibold text-sm">TGS &bull; Toronto, ON, Canada (Remote)</p>
+            </div>
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 self-start md:self-auto">
+              Depuis 2021
+            </span>
+          </div>
+
+          <ul class="space-y-2.5 text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed mt-4 list-disc pl-4">
+            <li><strong>Applications Web de bout en bout :</strong> Architecture Front (React, Next.js, Vue) et Back (Node.js, Express, Django) garantissant performance et scalabilité.</li>
+            <li><strong>Intégration IA &amp; LLM :</strong> Développement et déploiement de chatbots intelligents, pipelines de traitement de données et automatisation de processus métiers.</li>
+            <li><strong>Bases de données &amp; APIs :</strong> APIs RESTful sécurisées (JWT, RBAC), PostgreSQL, MySQL, MongoDB, Firebase.</li>
+            <li><strong>DevOps &amp; Cloud :</strong> Pipelines CI/CD automatisés, déploiements AWS, Vercel, Render, Heroku.</li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2 mt-5 pt-4 border-t border-neutral-100 dark:border-neutral-800/80">
+            <span class="text-xs px-2.5 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 font-medium">Next.js</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 font-medium">LLM Chatbots</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 font-medium">AWS &amp; CI/CD</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 font-medium">PostgreSQL / MongoDB</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 4 & 5: DataVision Lab & LLS -->
+      <div class="relative pl-10 md:pl-12 group">
+        <span class="absolute left-1.5 md:left-2.5 top-1.5 -translate-x-1/2 w-4 h-4 rounded-full bg-neutral-900 dark:bg-white border-4 border-white dark:border-[#0c0f17] group-hover:scale-125 transition-transform duration-200"></span>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white dark:bg-neutral-900/60 p-6 rounded-2xl border border-neutral-200/80 dark:border-neutral-800">
+            <span class="text-xs text-neutral-500 font-mono">2025 &bull; Casablanca</span>
+            <h3 class="text-lg font-bold text-neutral-900 dark:text-white mt-1">Machine Learning Engineer</h3>
+            <p class="text-sky-600 dark:text-sky-400 text-xs font-medium mb-3">DataVision Lab</p>
+            <p class="text-neutral-600 dark:text-neutral-300 text-xs leading-relaxed">
+              Modèles de Machine Learning &amp; Deep Learning (TensorFlow, PyTorch), tuning des hyperparamètres, et déploiement via API REST pour intégration temps réel dans des apps web.
+            </p>
+          </div>
+
+          <div class="bg-white dark:bg-neutral-900/60 p-6 rounded-2xl border border-neutral-200/80 dark:border-neutral-800">
+            <span class="text-xs text-neutral-500 font-mono">2024 &bull; Remote</span>
+            <h3 class="text-lg font-bold text-neutral-900 dark:text-white mt-1">Data Science / ML Intern</h3>
+            <p class="text-sky-600 dark:text-sky-400 text-xs font-medium mb-3">LLS</p>
+            <p class="text-neutral-600 dark:text-neutral-300 text-xs leading-relaxed">
+              Analyse exploratoire de données (EDA) avec Pandas/Seaborn, modélisation supervisée (régression, classification) et évaluation rigoureuse (F1-score, accuracy, recall).
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS ==================== -->
+  <section id="skills" class="py-24 bg-white dark:bg-[#10141f] border-y border-neutral-200/70 dark:border-neutral-800/80">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <div class="mb-14">
+        <span class="text-xs font-bold tracking-[0.2em] uppercase text-sky-600 dark:text-sky-400">STACK TECHNIQUE</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-neutral-900 dark:text-white mt-1">Compétences &amp; Outils</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Front-End -->
+        <div class="p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold">
+              &lt;/&gt;
+            </div>
+            <h3 class="font-bold text-lg text-neutral-900 dark:text-white">Front-End</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-chip">React.js</span>
+            <span class="skill-chip">Next.js</span>
+            <span class="skill-chip">Vue.js</span>
+            <span class="skill-chip">TypeScript</span>
+            <span class="skill-chip">JavaScript (ES6+)</span>
+            <span class="skill-chip">HTML5 / CSS3</span>
+            <span class="skill-chip">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <!-- Back-End -->
+        <div class="p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
+              { }
+            </div>
+            <h3 class="font-bold text-lg text-neutral-900 dark:text-white">Back-End &amp; APIs</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-chip">Node.js / Express</span>
+            <span class="skill-chip">Python / Django</span>
+            <span class="skill-chip">FastAPI / Flask</span>
+            <span class="skill-chip">RESTful APIs</span>
+            <span class="skill-chip">GraphQL</span>
+            <span class="skill-chip">Microservices</span>
+            <span class="skill-chip">PHP</span>
+          </div>
+        </div>
+
+        <!-- Intelligence Artificielle & Data -->
+        <div class="p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold">
+              AI
+            </div>
+            <h3 class="font-bold text-lg text-neutral-900 dark:text-white">IA &amp; Machine Learning</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-chip">Intégration LLM</span>
+            <span class="skill-chip">Chatbots intelligents</span>
+            <span class="skill-chip">Automatisation IA</span>
+            <span class="skill-chip">TensorFlow &amp; PyTorch</span>
+            <span class="skill-chip">CNN / RNN</span>
+            <span class="skill-chip">YOLO (Computer Vision)</span>
+            <span class="skill-chip">scikit-learn</span>
+          </div>
+        </div>
+
+        <!-- Bases de données -->
+        <div class="p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
+              DB
+            </div>
+            <h3 class="font-bold text-lg text-neutral-900 dark:text-white">Bases de données</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-chip">PostgreSQL</span>
+            <span class="skill-chip">MySQL</span>
+            <span class="skill-chip">MongoDB</span>
+            <span class="skill-chip">Firebase</span>
+            <span class="skill-chip">Data Modeling</span>
+          </div>
+        </div>
+
+        <!-- DevOps & Cloud -->
+        <div class="p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold">
+              ☁
+            </div>
+            <h3 class="font-bold text-lg text-neutral-900 dark:text-white">DevOps &amp; Cloud</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-chip">Git / GitHub</span>
+            <span class="skill-chip">Docker</span>
+            <span class="skill-chip">CI / CD</span>
+            <span class="skill-chip">AWS</span>
+            <span class="skill-chip">Vercel</span>
+            <span class="skill-chip">Render / Heroku</span>
+          </div>
+        </div>
+
+        <!-- MLOps & Data Processing -->
+        <div class="p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold">
+              ⚙
+            </div>
+            <h3 class="font-bold text-lg text-neutral-900 dark:text-white">MLOps &amp; Traitement</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-chip">Feature Engineering</span>
+            <span class="skill-chip">Model Monitoring</span>
+            <span class="skill-chip">Drift Detection</span>
+            <span class="skill-chip">MLflow</span>
+            <span class="skill-chip">Model Versioning</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS ==================== -->
+  <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+      <div>
+        <span class="text-xs font-bold tracking-[0.2em] uppercase text-sky-600 dark:text-sky-400">PORTFOLIO &amp; REPOSITORIES</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-neutral-900 dark:text-white mt-1">Projets Réalisés</h2>
+      </div>
+      <p class="text-neutral-500 dark:text-neutral-400 text-sm max-w-md">
+        Sélection de projets issus de mon GitHub <a href="https://github.com/YassineChani" target="_blank" class="text-neutral-900 dark:text-white font-semibold underline hover:text-sky-500">@YassineChani</a> et de mes réalisations professionnelles.
+      </p>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="flex flex-wrap items-center gap-2 mb-12" id="project-filters">
+      <button data-filter="all" class="filter-btn active px-4 py-2 rounded-full text-xs font-semibold bg-neutral-900 dark:bg-white text-white dark:text-neutral-950 transition-all">
+        Tous les projets (<span id="count-all">8</span>)
+      </button>
+      <button data-filter="web" class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-neutral-100 dark:bg-neutral-800/80 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all">
+        Web &amp; E-Commerce
+      </button>
+      <button data-filter="cloud" class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-neutral-100 dark:bg-neutral-800/80 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all">
+        SaaS &amp; Cloud AWS
+      </button>
+      <button data-filter="ai" class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-neutral-100 dark:bg-neutral-800/80 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all">
+        Intelligence Artificielle
+      </button>
+    </div>
+
+    <!-- Project Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="projects-grid">
+      
+      <!-- Project 1: E-commerce Symfony -->
+      <div class="project-card group bg-white dark:bg-neutral-900/60 rounded-3xl border border-neutral-200/80 dark:border-neutral-800 overflow-hidden hover:shadow-xl hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-300" data-category="web">
+        <div class="h-44 bg-gradient-to-tr from-sky-950 to-neutral-900 p-6 flex flex-col justify-between text-white relative overflow-hidden">
+          <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-sky-500/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono px-3 py-1 bg-white/10 rounded-full border border-white/20">E-Commerce &bull; Symfony</span>
+            <span class="text-xs font-bold text-sky-300">@YassineChani</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold tracking-tight">E-Commerce Platform</h3>
+            <p class="text-xs text-neutral-300 mt-1">-ecommerce-symfony</p>
+          </div>
+        </div>
+        <div class="p-6 md:p-7 space-y-4">
+          <p class="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed">
+            Plateforme e-commerce complète développée sous le framework Symfony avec gestion dynamique du panier d'achat, catalogue produits, dashboard administrateur et paiements sécurisés.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Symfony</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">PHP 8+</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Doctrine / MySQL</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Tailwind CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Sonic Cars -->
+      <div class="project-card group bg-white dark:bg-neutral-900/60 rounded-3xl border border-neutral-200/80 dark:border-neutral-800 overflow-hidden hover:shadow-xl hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-300" data-category="web">
+        <div class="h-44 bg-gradient-to-tr from-amber-950 to-neutral-900 p-6 flex flex-col justify-between text-white relative overflow-hidden">
+          <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-amber-500/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono px-3 py-1 bg-white/10 rounded-full border border-white/20">Automobile &bull; Location</span>
+            <span class="text-xs font-bold text-amber-300">@YassineChani</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold tracking-tight">Sonic Cars</h3>
+            <p class="text-xs text-neutral-300 mt-1">sonic-cars</p>
+          </div>
+        </div>
+        <div class="p-6 md:p-7 space-y-4">
+          <p class="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed">
+            Application web contemporaine pour la présentation, le filtrage et la réservation en ligne de véhicules haut de gamme avec interface dynamique et expérience utilisateur fluide.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">JavaScript</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">React / Next.js</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Tailwind CSS</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Booking UI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Gentlemen Barber & Coiffure -->
+      <div class="project-card group bg-white dark:bg-neutral-900/60 rounded-3xl border border-neutral-200/80 dark:border-neutral-800 overflow-hidden hover:shadow-xl hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-300" data-category="web">
+        <div class="h-44 bg-gradient-to-tr from-stone-900 to-neutral-950 p-6 flex flex-col justify-between text-white relative overflow-hidden">
+          <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-neutral-400/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono px-3 py-1 bg-white/10 rounded-full border border-white/20">Booking &bull; Service Client</span>
+            <span class="text-xs font-bold text-neutral-300">@YassineChani</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold tracking-tight">Gentlemen Barber &amp; Coiff</h3>
+            <p class="text-xs text-neutral-400 mt-1">gentlemen-barber-coiff</p>
+          </div>
+        </div>
+        <div class="p-6 md:p-7 space-y-4">
+          <p class="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed">
+            Site vitrine moderne et système de prise de rendez-vous pour salon haut de gamme : choix des créneaux en direct, catalogue des prestations, et design responsive raffiné.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">JavaScript</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">CSS3 / Animations</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Responsive UI</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Planning</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: Norfatek Platform -->
+      <div class="project-card group bg-white dark:bg-neutral-900/60 rounded-3xl border border-neutral-200/80 dark:border-neutral-800 overflow-hidden hover:shadow-xl hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-300" data-category="cloud">
+        <div class="h-44 bg-gradient-to-tr from-emerald-950 to-neutral-900 p-6 flex flex-col justify-between text-white relative overflow-hidden">
+          <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-emerald-500/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono px-3 py-1 bg-white/10 rounded-full border border-white/20">SaaS &bull; Entreprise</span>
+            <span class="text-xs font-bold text-emerald-300">@YassineChani</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold tracking-tight">Norfatek Platform</h3>
+            <p class="text-xs text-neutral-300 mt-1">norfatek-platform</p>
+          </div>
+        </div>
+        <div class="p-6 md:p-7 space-y-4">
+          <p class="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed">
+            Plateforme SaaS professionnelle dédiée à l'optimisation des opérations, la centralisation des données métier et le reporting analytique temps réel pour les organisations.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Vue.js / React</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Node.js</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">PostgreSQL</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">REST API</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: Cloud Fullstack AWS Infrastructure -->
+      <div class="project-card group bg-white dark:bg-neutral-900/60 rounded-3xl border border-neutral-200/80 dark:border-neutral-800 overflow-hidden hover:shadow-xl hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-300" data-category="cloud">
+        <div class="h-44 bg-gradient-to-tr from-cyan-950 to-neutral-900 p-6 flex flex-col justify-between text-white relative overflow-hidden">
+          <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-cyan-500/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono px-3 py-1 bg-white/10 rounded-full border border-white/20">DevOps &bull; AWS Cloud</span>
+            <span class="text-xs font-bold text-cyan-300">@YassineChani</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold tracking-tight">Full Stack Cloud AWS</h3>
+            <p class="text-xs text-neutral-300 mt-1">tp-fullstack-aws</p>
+          </div>
+        </div>
+        <div class="p-6 md:p-7 space-y-4">
+          <p class="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed">
+            Mise en place d'une infrastructure cloud complète avec conteneurisation Docker, pipelines CI/CD automatisés et déploiement résilient sur les services Amazon Web Services (AWS EC2, S3, RDS).
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">AWS</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Docker</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">CI / CD</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Nginx / Linux</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6: Client Portal & Auth -->
+      <div class="project-card group bg-white dark:bg-neutral-900/60 rounded-3xl border border-neutral-200/80 dark:border-neutral-800 overflow-hidden hover:shadow-xl hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-300" data-category="cloud">
+        <div class="h-44 bg-gradient-to-tr from-purple-950 to-neutral-900 p-6 flex flex-col justify-between text-white relative overflow-hidden">
+          <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-purple-500/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono px-3 py-1 bg-white/10 rounded-full border border-white/20">Security &bull; Auth API</span>
+            <span class="text-xs font-bold text-purple-300">@YassineChani</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold tracking-tight">Client Portal &amp; Auth</h3>
+            <p class="text-xs text-neutral-300 mt-1">client-portal-auth</p>
+          </div>
+        </div>
+        <div class="p-6 md:p-7 space-y-4">
+          <p class="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed">
+            Service sécurisé d'authentification et portail client : gestion des accès basée sur les rôles (RBAC), tokens JWT, rafraîchissement automatique de sessions et API REST blindée.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Node.js</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">JWT / OAuth</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">TypeScript</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Express</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 7: Object Detection YOLO / CNN -->
+      <div class="project-card group bg-white dark:bg-neutral-900/60 rounded-3xl border border-neutral-200/80 dark:border-neutral-800 overflow-hidden hover:shadow-xl hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-300" data-category="ai">
+        <div class="h-44 bg-gradient-to-tr from-rose-950 to-neutral-900 p-6 flex flex-col justify-between text-white relative overflow-hidden">
+          <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-rose-500/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono px-3 py-1 bg-white/10 rounded-full border border-white/20">Computer Vision &bull; 2025</span>
+            <span class="text-xs font-bold text-rose-300">YOLO &bull; CNN</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold tracking-tight">Object Detection (YOLO / CNN)</h3>
+            <p class="text-xs text-neutral-300 mt-1">Vision par ordinateur en temps réel</p>
+          </div>
+        </div>
+        <div class="p-6 md:p-7 space-y-4">
+          <p class="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed">
+            Conception et entraînement d'un modèle d'intelligence artificielle basé sur YOLO et CNN pour la détection précise d'objets avec data augmentation et tuning d'hyperparamètres.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">YOLO</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">PyTorch</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Python</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">OpenCV</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 8: AI Recommendation System -->
+      <div class="project-card group bg-white dark:bg-neutral-900/60 rounded-3xl border border-neutral-200/80 dark:border-neutral-800 overflow-hidden hover:shadow-xl hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-300" data-category="ai">
+        <div class="h-44 bg-gradient-to-tr from-indigo-950 to-neutral-900 p-6 flex flex-col justify-between text-white relative overflow-hidden">
+          <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-indigo-500/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono px-3 py-1 bg-white/10 rounded-full border border-white/20">Machine Learning &bull; 2025</span>
+            <span class="text-xs font-bold text-indigo-300">Recommendation Engine</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold tracking-tight">AI Recommendation Engine</h3>
+            <p class="text-xs text-neutral-300 mt-1">Filtrage collaboratif &amp; content-based</p>
+          </div>
+        </div>
+        <div class="p-6 md:p-7 space-y-4">
+          <p class="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed">
+            Moteur intelligent de recommandation basé sur le machine learning. Pipeline complet : préparation des données, modélisation avec scikit-learn et API de prédiction.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">scikit-learn</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Python</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">Pandas / NumPy</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium border border-neutral-200/60 dark:border-neutral-700/60">ML Pipeline</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- More repositories button on GitHub -->
+    <div class="mt-14 text-center">
+      <a href="https://github.com/YassineChani" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-neutral-100 dark:bg-neutral-800/90 text-neutral-900 dark:text-white font-bold text-sm border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition shadow-sm hover:scale-105">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        <span>Explorer tous mes dépôts sur GitHub (@YassineChani)</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contact" class="py-24 bg-white dark:bg-[#10141f] border-t border-neutral-200/70 dark:border-neutral-800/80">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Contact Info -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs font-bold tracking-[0.2em] uppercase text-sky-600 dark:text-sky-400">CONTACT</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-neutral-900 dark:text-white leading-tight">
+            Travaillons ensemble sur vos projets web &amp; IA.
+          </h2>
+          <p class="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed">
+            Vous avez un projet ambitieux, besoin d'une expertise technique ou d'une formation sur mesure ? Envoyez-moi un message et je vous répondrai rapidement.
+          </p>
+
+          <div class="space-y-4 pt-4">
+            <!-- Email -->
+            <a href="mailto:imparyassine@gmail.com" class="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 dark:bg-neutral-900/60 border border-neutral-200/80 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition group">
+              <div class="w-10 h-10 rounded-lg bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center text-neutral-800 dark:text-neutral-200 group-hover:scale-110 transition-transform">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <span class="text-xs text-neutral-400 block font-medium">Email Direct</span>
+                <span class="text-sm font-bold text-neutral-900 dark:text-white">imparyassine@gmail.com</span>
+              </div>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:0637248325" class="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 dark:bg-neutral-900/60 border border-neutral-200/80 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition group">
+              <div class="w-10 h-10 rounded-lg bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center text-neutral-800 dark:text-neutral-200 group-hover:scale-110 transition-transform">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <span class="text-xs text-neutral-400 block font-medium">Téléphone / WhatsApp</span>
+                <span class="text-sm font-bold text-neutral-900 dark:text-white">+212 637-248325</span>
+              </div>
+            </a>
+
+            <!-- Location -->
+            <div class="flex items-center gap-4 p-4 rounded-xl bg-neutral-50 dark:bg-neutral-900/60 border border-neutral-200/80 dark:border-neutral-800">
+              <div class="w-10 h-10 rounded-lg bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center text-neutral-800 dark:text-neutral-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <span class="text-xs text-neutral-400 block font-medium">Localisation</span>
+                <span class="text-sm font-bold text-neutral-900 dark:text-white">Casablanca, Maroc (Disponible à distance)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Form -->
+        <div class="lg:col-span-7 bg-neutral-50 dark:bg-neutral-900/50 p-8 rounded-3xl border border-neutral-200/80 dark:border-neutral-800">
+          <form id="contact-form" class="space-y-5">
+            <div>
+              <label for="name" class="block text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2">Votre Nom</label>
+              <input type="text" id="name" required placeholder="Ex: Karim Alami" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white transition" />
+            </div>
+
+            <div>
+              <label for="email" class="block text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2">Votre Email</label>
+              <input type="email" id="email" required placeholder="Ex: karim@example.com" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white transition" />
+            </div>
+
+            <div>
+              <label for="subject" class="block text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2">Sujet</label>
+              <input type="text" id="subject" placeholder="Ex: Projet Web Full Stack / IA" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white transition" />
+            </div>
+
+            <div>
+              <label for="message" class="block text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2">Message</label>
+              <textarea id="message" rows="4" required placeholder="Détaillez vos besoins ou votre question..." class="w-full px-4 py-3 rounded-xl bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white transition"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 px-6 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-950 font-bold text-sm hover:opacity-90 transition-all flex items-center justify-center gap-2">
+              <span>Envoyer le message</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+            <p id="form-feedback" class="text-center text-xs text-emerald-600 dark:text-emerald-400 font-medium hidden">Merci ! Votre message a été préparé.</p>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER (Matches original image footer) ==================== -->
+  <footer class="border-t border-neutral-200/70 dark:border-neutral-800/80 bg-white dark:bg-[#0c0f17] py-8 transition-colors">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <!-- Copyright text matching screenshot -->
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        &copy; 2026 Yassine Chani. Tous droits réservés.
+      </p>
+
+      <!-- Social Icons matching screenshot -->
+      <div class="flex items-center gap-5 text-neutral-600 dark:text-neutral-400">
+        <!-- GitHub -->
+        <a href="https://github.com/YassineChani" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hover:text-neutral-900 dark:hover:text-white transition">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-neutral-900 dark:hover:text-white transition">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+
+        <!-- X (Twitter) -->
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="hover:text-neutral-900 dark:hover:text-white transition">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-neutral-900 dark:hover:text-white transition">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
