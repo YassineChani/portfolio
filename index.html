@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yassine Chani — Expert Full Stack & AI Engineer | Freelance Portfolio</title>
+  <meta name="description" content="Portfolio de Yassine Chani — Expert Full Stack Developer & Ingénieur IA / Machine Learning (+5 ans d'expérience internationale USA, Canada, Maroc). Disponible pour missions Freelance & Remote." />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ambient Background Glows -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Top Recruiter Banner -->
+  <div class="recruiter-topbar">
+    <div class="container topbar-inner">
+      <div class="availability-pill">
+        <span class="pulse-dot"></span>
+        <span data-i18n="topbar.status">Disponible immédiatement pour missions Freelance & Remote (USA / EU / MENA)</span>
+      </div>
+      <div class="topbar-actions">
+        <span class="timezone-badge"><i data-lucide="clock"></i> Casablanca (GMT+1) • Overlap US EST & EU CET</span>
+        <button id="copyEmailTop" class="topbar-btn" title="Copier l'email">
+          <i data-lucide="copy"></i> imparyassine@gmail.com
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand">
+        <div class="brand-logo">YC</div>
+        <div class="brand-text">
+          <span class="brand-name">Yassine Chani</span>
+          <span class="brand-role">Full Stack & AI Expert</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#services" data-i18n="nav.services">Services Freelance</a>
+        <a href="#projects" data-i18n="nav.projects">Projets & IA</a>
+        <a href="#experience" data-i18n="nav.experience">Expériences</a>
+        <a href="#skills" data-i18n="nav.skills">Stack</a>
+        <a href="#estimator" class="nav-highlight" data-i18n="nav.estimator">Simulateur Devis</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="nav-controls">
+        <!-- Language Toggle -->
+        <button id="langToggle" class="icon-chip" aria-label="Change Language">
+          <i data-lucide="globe"></i>
+          <span id="currentLangLabel">FR</span>
+        </button>
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="icon-chip" aria-label="Toggle Theme">
+          <i data-lucide="sun" id="themeIcon"></i>
+        </button>
+        <!-- Quick Hire CTA -->
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <i data-lucide="zap"></i>
+          <span data-i18n="nav.hire">Recruter / Devis</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badges">
+            <span class="badge badge-accent">
+              <i data-lucide="sparkles"></i>
+              <span data-i18n="hero.badge1">Expert Full Stack & Ingénieur IA</span>
+            </span>
+            <span class="badge badge-outline">
+              <i data-lucide="globe-2"></i>
+              <span data-i18n="hero.badge2">+5 ans d'Expérience Internationale (USA • Canada • Maroc)</span>
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            <span data-i18n="hero.title1">Je conçois des applications Web</span>
+            <span class="gradient-text" data-i18n="hero.titleHighlight">Scalables & Propulsées par l'IA</span>
+            <span data-i18n="hero.title2">prêtes pour la production.</span>
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Développeur Full Stack Senior (React, Next.js, Node.js, Django), Ingénieur Machine Learning & Formateur. J'accompagne les startups et entreprises internationales de l'architecture technique au déploiement de solutions IA à fort ROI.
+          </p>
+
+          <!-- Recruiter Quick Action Bar -->
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <i data-lucide="rocket"></i>
+              <span data-i18n="hero.ctaPrimary">Démarrer un Projet Freelance</span>
+            </a>
+            <a href="#estimator" class="btn btn-secondary btn-lg">
+              <i data-lucide="calculator"></i>
+              <span data-i18n="hero.ctaSecondary">Estimer un Projet en 30s</span>
+            </a>
+            <button id="openResumeModal" class="btn btn-ghost btn-lg">
+              <i data-lucide="file-text"></i>
+              <span data-i18n="hero.ctaResume">CV Exécutif (PDF)</span>
+            </button>
+          </div>
+
+          <!-- Key Metrics for Recruiters -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num">5+</span>
+              <span class="stat-label" data-i18n="stats.years">Années d'Expérience</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">3</span>
+              <span class="stat-label" data-i18n="stats.markets">Marchés (USA, Canada, Maroc)</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">25+</span>
+              <span class="stat-label" data-i18n="stats.projects">Apps Web & Modèles IA livrés</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">100+</span>
+              <span class="stat-label" data-i18n="stats.students">Développeurs formés</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Card: Recruiter Snapshot & Interactive Terminal -->
+        <div class="hero-visual">
+          <div class="profile-card">
+            <div class="profile-card-header">
+              <div class="avatar-wrapper">
+                <div class="avatar-initials">YC</div>
+                <span class="status-indicator" title="Available for hire"></span>
+              </div>
+              <div class="profile-meta">
+                <h2>Yassine Chani</h2>
+                <p>Full Stack Architect • AI/ML Engineer</p>
+                <div class="location-tags">
+                  <span><i data-lucide="map-pin"></i> Casablanca, Maroc</span>
+                  <span><i data-lucide="car"></i> Permis B</span>
+                </div>
+              </div>
+              <div class="verified-pill" title="Expérience internationale vérifiée">
+                <i data-lucide="shield-check"></i> Top Freelance
+              </div>
+            </div>
+
+            <!-- Interactive Code/Profile Preview -->
+            <div class="terminal-window">
+              <div class="terminal-bar">
+                <div class="term-dots">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <span class="term-title">yassine_profile.ts</span>
+                <button id="runProfileTest" class="term-run-btn">
+                  <i data-lucide="play"></i> <span data-i18n="hero.termRun">Tester Compatibilité</span>
+                </button>
+              </div>
+              <pre class="terminal-code"><code><span class="c-kw">const</span> <span class="c-var">freelancer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">"Yassine Chani"</span>,
+  <span class="c-prop">roles</span>: [<span class="c-str">"Full Stack Lead"</span>, <span class="c-str">"AI/ML Engineer"</span>, <span class="c-str">"Tech Trainer"</span>],
+  <span class="c-prop">frontend</span>: [<span class="c-str">"React"</span>, <span class="c-str">"Next.js"</span>, <span class="c-str">"Vue.js"</span>, <span class="c-str">"TypeScript"</span>],
+  <span class="c-prop">backend</span>: [<span class="c-str">"Node.js/Express"</span>, <span class="c-str">"Python/Django"</span>, <span class="c-str">"FastAPI"</span>],
+  <span class="c-prop">ai_ml</span>: [<span class="c-str">"LLM/OpenAI"</span>, <span class="c-str">"PyTorch"</span>, <span class="c-str">"TensorFlow"</span>, <span class="c-str">"YOLO/CNN"</span>],
+  <span class="c-prop">cloud_devops</span>: [<span class="c-str">"AWS"</span>, <span class="c-str">"Docker"</span>, <span class="c-str">"CI/CD"</span>, <span class="c-str">"MLOps/MLflow"</span>],
+  <span class="c-prop">clientLocations</span>: [<span class="c-str">"USA (Gloria)"</span>, <span class="c-str">"Canada (TGS)"</span>, <span class="c-str">"Morocco"</span>],
+  <span class="c-prop">languages</span>: [<span class="c-str">"Français"</span>, <span class="c-str">"English"</span>, <span class="c-str">"Español"</span>],
+  <span class="c-prop">availableForHire</span>: <span class="c-bool">true</span>
+};</code></pre>
+            </div>
+
+            <!-- Direct Recruiter Quick Channels -->
+            <div class="quick-channels">
+              <a href="https://wa.me/212637248325?text=Bonjour%20Yassine,%20j'ai%20vu%20votre%20portfolio%20et%20je%20souhaite%20discuter%20d'une%20opportunit%C3%A9." target="_blank" rel="noopener" class="channel-btn whatsapp">
+                <i data-lucide="message-circle"></i> WhatsApp Direct
+              </a>
+              <a href="mailto:imparyassine@gmail.com?subject=Opportunit%C3%A9%20Freelance%20/%20Mission%20-%20Portfolio" class="channel-btn email">
+                <i data-lucide="mail"></i> Email Direct
+              </a>
+              <a href="tel:+212637248325" class="channel-btn phone">
+                <i data-lucide="phone-call"></i> 0637-248325
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY HIRE ME / FREELANCE SERVICES SECTION -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="briefcase"></i> <span data-i18n="services.tag">Offres Freelance & Consulting</span></span>
+          <h2 class="section-title" data-i18n="services.title">Comment je peux accélérer vos produits</h2>
+          <p class="section-desc" data-i18n="services.desc">
+            Que vous soyez un recruteur cherchant un profil senior autonome ou un fondateur souhaitant lancer/scaler un produit Web & IA.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-icon"><i data-lucide="layers"></i></div>
+            <div class="service-badge" data-i18n="services.s1.badge">De A à Z • Clé en main</div>
+            <h3 data-i18n="services.s1.title">Développement Full Stack Sur Mesure</h3>
+            <p data-i18n="services.s1.desc">
+              Conception et développement d'applications web performantes (SaaS, plateformes métiers, dashboards) avec React, Next.js, Vue.js en Front et Node.js, Django ou FastAPI en Back.
+            </p>
+            <ul class="service-list">
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="services.s1.b1">Architecture scalable, Clean Code & Microservices</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="services.s1.b2">APIs RESTful & GraphQL sécurisées (JWT / OAuth)</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="services.s1.b3">Optimisation PostgreSQL, MySQL, MongoDB & Firebase</span></li>
+            </ul>
+            <a href="#estimator" class="service-link" data-service-select="fullstack">
+              <span data-i18n="services.estimateBtn">Chiffrer ce besoin</span> <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card featured">
+            <div class="featured-ribbon" data-i18n="services.s2.ribbon">Le Plus Demandé</div>
+            <div class="service-icon"><i data-lucide="bot"></i></div>
+            <div class="service-badge" data-i18n="services.s2.badge">IA Générative & Automation</div>
+            <h3 data-i18n="services.s2.title">Intégration IA & Agents LLM en Production</h3>
+            <p data-i18n="services.s2.desc">
+              Intégration de fonctionnalités IA à forte valeur ajoutée dans vos produits existants sans régression : chatbots intelligents, automatisation de processus et pipelines de données.
+            </p>
+            <ul class="service-list">
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="services.s2.b1">Chatbots LLM & assistants support client automatisés</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="services.s2.b2">Intégration API OpenAI & modèles NLP personnalisés</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="services.s2.b3">Automatisation de workflows métiers & extraction d'insights</span></li>
+            </ul>
+            <a href="#estimator" class="service-link" data-service-select="ai_llm">
+              <span data-i18n="services.estimateBtn">Chiffrer ce besoin</span> <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-icon"><i data-lucide="brain-circuit"></i></div>
+            <div class="service-badge" data-i18n="services.s3.badge">Data Science & Deep Learning</div>
+            <h3 data-i18n="services.s3.title">Machine Learning, Computer Vision & MLOps</h3>
+            <p data-i18n="services.s3.desc">
+              Développement de modèles prédictifs, systèmes de recommandation et détection d'objets, déployés via API REST avec monitoring de drift en production.
+            </p>
+            <ul class="service-list">
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="services.s3.b1">Modèles Deep Learning (PyTorch, TensorFlow, YOLO/CNN)</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="services.s3.b2">Systèmes de recommandation & moteurs de scoring</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="services.s3.b3">Déploiement MLOps (MLflow, Docker, CI/CD, AWS)</span></li>
+            </ul>
+            <a href="#estimator" class="service-link" data-service-select="ml_cv">
+              <span data-i18n="services.estimateBtn">Chiffrer ce besoin</span> <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-icon"><i data-lucide="graduation-cap"></i></div>
+            <div class="service-badge" data-i18n="services.s4.badge">Audit, Rescue & Coaching</div>
+            <h3 data-i18n="services.s4.title">Audit Technique, Debugging Critique & Formation</h3>
+            <p data-i18n="services.s4.desc">
+              Intervention rapide sur des bugs critiques en production, refonte de performance, ou montée en compétence de vos équipes de développement aux standards Clean Code.
+            </p>
+            <ul class="service-list">
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="services.s4.b1">Diagnostic & résolution d'incidents critiques en production</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="services.s4.b2">Audit d'architecture, scalabilité & revue de code</span></li>
+              <li><i data-lucide="check-circle-2"></i> <span data-i18n="services.s4.b3">Formation d'équipes sur React, Node, Python & IA</span></li>
+            </ul>
+            <a href="#estimator" class="service-link" data-service-select="audit">
+              <span data-i18n="services.estimateBtn">Chiffrer ce besoin</span> <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED CASE STUDIES & PROJECTS -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="code-2"></i> <span data-i18n="projects.tag">Réalisations & Études de Cas</span></span>
+          <h2 class="section-title" data-i18n="projects.title">Projets Phares & Impact en Production</h2>
+          <p class="section-desc" data-i18n="projects.desc">
+            Sélection de missions internationales et projets d'ingénierie IA illustrant ma capacité à livrer des systèmes robustes.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs" id="projectFilters">
+          <button class="filter-btn active" data-filter="all" data-i18n="projects.filterAll">Tous les Projets (6)</button>
+          <button class="filter-btn" data-filter="fullstack" data-i18n="projects.filterFS">Full Stack & Cloud</button>
+          <button class="filter-btn" data-filter="ai" data-i18n="projects.filterAI">IA & LLM</button>
+          <button class="filter-btn" data-filter="ml" data-i18n="projects.filterML">Machine Learning & Vision</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Project 1: Gloria USA -->
+          <article class="project-card" data-category="fullstack ai">
+            <div class="project-top">
+              <span class="project-client"><i data-lucide="building-2"></i> Gloria • États-Unis (Remote)</span>
+              <span class="project-year">2023 – 2025</span>
+            </div>
+            <h3 class="project-title" data-i18n="projects.p1.title">Architecture Full Stack & Intégration IA en Production</h3>
+            <p class="project-summary" data-i18n="projects.p1.desc">
+              Intervention en tant que Technical Expert sur l'ensemble du cycle produit : refonte des points de friction, intégration de fonctionnalités IA sans régression et résolution d'incidents critiques en production.
+            </p>
+            <div class="project-metrics">
+              <div class="metric">
+                <strong>Zero-Regression</strong>
+                <span data-i18n="projects.p1.m1">Déploiement IA en prod</span>
+              </div>
+              <div class="metric">
+                <strong>US Sync</strong>
+                <span data-i18n="projects.p1.m2">Coordination Agile USA</span>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span>React / Next.js</span>
+              <span>Node.js</span>
+              <span>AI Integration</span>
+              <span>Root-Cause Debugging</span>
+              <span>Scalability</span>
+            </div>
+          </article>
+
+          <!-- Project 2: TGS Toronto -->
+          <article class="project-card" data-category="fullstack ai">
+            <div class="project-top">
+              <span class="project-client"><i data-lucide="globe"></i> TGS • Toronto, Canada (Freelance)</span>
+              <span class="project-year">2021 – Présent</span>
+            </div>
+            <h3 class="project-title" data-i18n="projects.p2.title">Applications SaaS, Chatbots LLM & Pipelines d'Automatisation</h3>
+            <p class="project-summary" data-i18n="projects.p2.desc">
+              Conception de bout en bout d'applications web sur mesure et déploiement de chatbots intelligents basés sur les LLM (OpenAI) pour automatiser le support technique et la relation client.
+            </p>
+            <div class="project-metrics">
+              <div class="metric">
+                <strong>CI/CD Cloud</strong>
+                <span data-i18n="projects.p2.m1">AWS, Vercel, Docker</span>
+              </div>
+              <div class="metric">
+                <strong>LLM Agents</strong>
+                <span data-i18n="projects.p2.m2">Support & Data Pipelines</span>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span>React / Vue.js</span>
+              <span>Django / Express</span>
+              <span>OpenAI / LLM</span>
+              <span>PostgreSQL / MongoDB</span>
+              <span>AWS & CI/CD</span>
+            </div>
+          </article>
+
+          <!-- Project 3: DataVision Lab -->
+          <article class="project-card" data-category="ml ai">
+            <div class="project-top">
+              <span class="project-client"><i data-lucide="cpu"></i> DataVision Lab • Casablanca</span>
+              <span class="project-year">2025</span>
+            </div>
+            <h3 class="project-title" data-i18n="projects.p3.title">Pipelines Deep Learning & Déploiement de Modèles ML via API REST</h3>
+            <p class="project-summary" data-i18n="projects.p3.desc">
+              Conception de modèles de classification et prédiction sur datasets volumineux, optimisation des hyperparamètres avec TensorFlow & PyTorch, et exposition via API REST pour applications web.
+            </p>
+            <div class="project-metrics">
+              <div class="metric">
+                <strong>End-to-End</strong>
+                <span data-i18n="projects.p3.m1">Prétraitement → API</span>
+              </div>
+              <div class="metric">
+                <strong>High Accuracy</strong>
+                <span data-i18n="projects.p3.m2">Tuning & Loss Reduction</span>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span>PyTorch</span>
+              <span>TensorFlow</span>
+              <span>FastAPI / Flask</span>
+              <span>Feature Engineering</span>
+              <span>MLOps</span>
+            </div>
+          </article>
+
+          <!-- Project 4: Computer Vision YOLO -->
+          <article class="project-card" data-category="ml">
+            <div class="project-top">
+              <span class="project-client"><i data-lucide="scan-eye"></i> Computer Vision R&D • Oujda</span>
+              <span class="project-year">2025</span>
+            </div>
+            <h3 class="project-title" data-i18n="projects.p4.title">Système de Détection d'Objets Temps Réel (YOLO & CNN)</h3>
+            <p class="project-summary" data-i18n="projects.p4.desc">
+              Conception et entraînement d'un modèle de vision par ordinateur basé sur YOLO et les réseaux convolutifs (CNN) sur un dataset annoté, avec data augmentation et fine-tuning avancé.
+            </p>
+            <div class="project-metrics">
+              <div class="metric">
+                <strong>YOLO / CNN</strong>
+                <span data-i18n="projects.p4.m1">Object Detection</span>
+              </div>
+              <div class="metric">
+                <strong>Fine-Tuned</strong>
+                <span data-i18n="projects.p4.m2">Data Augmentation</span>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span>YOLOv8</span>
+              <span>CNN</span>
+              <span>Computer Vision</span>
+              <span>Python</span>
+              <span>Deep Learning</span>
+            </div>
+          </article>
+
+          <!-- Project 5: Recommendation System -->
+          <article class="project-card" data-category="ml ai">
+            <div class="project-top">
+              <span class="project-client"><i data-lucide="sparkles"></i> AI Engine • EHEI</span>
+              <span class="project-year">2025</span>
+            </div>
+            <h3 class="project-title" data-i18n="projects.p5.title">Moteur de Recommandation Hybride (Collaborative & Content-Based)</h3>
+            <p class="project-summary" data-i18n="projects.p5.desc">
+              Développement d'un système de recommandation intelligent combinant le filtrage collaboratif et l'analyse de contenu, incluant la structuration des données utilisateurs et l'évaluation scikit-learn.
+            </p>
+            <div class="project-metrics">
+              <div class="metric">
+                <strong>Hybrid Filtering</strong>
+                <span data-i18n="projects.p5.m1">Collaborative + Content</span>
+              </div>
+              <div class="metric">
+                <strong>Scikit-Learn</strong>
+                <span data-i18n="projects.p5.m2">Pipeline Data Utilisateur</span>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Scikit-Learn</span>
+              <span>Pandas</span>
+              <span>Recommendation Engine</span>
+            </div>
+          </article>
+
+          <!-- Project 6: Tech Ed & Full Stack Mentorship -->
+          <article class="project-card" data-category="fullstack">
+            <div class="project-top">
+              <span class="project-client"><i data-lucide="award"></i> École des Hautes Études d'Ingénierie</span>
+              <span class="project-year">2021 – Présent</span>
+            </div>
+            <h3 class="project-title" data-i18n="projects.p6.title">Programme d'Accélération Full Stack & Clean Architecture</h3>
+            <p class="project-summary" data-i18n="projects.p6.desc">
+              Conception de cursus modernes (React, Vue, Node, Django), encadrement de projets réels du cahier des charges au déploiement, et mise en place de workflows Git et revues de code professionnelles.
+            </p>
+            <div class="project-metrics">
+              <div class="metric">
+                <strong>Clean Code</strong>
+                <span data-i18n="projects.p6.m1">MVC & Code Reviews</span>
+              </div>
+              <div class="metric">
+                <strong>A-to-Z</strong>
+                <span data-i18n="projects.p6.m2">Du Concept au Cloud</span>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span>Clean Architecture</span>
+              <span>React & Vue.js</span>
+              <span>Node.js & Django</span>
+              <span>Git Workflows</span>
+              <span>Tech Leadership</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE FREELANCE PROJECT ESTIMATOR (Huge Value for Recruiters & Clients) -->
+    <section id="estimator" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="calculator"></i> <span data-i18n="estimator.tag">Outil Interactif pour Recruteurs & Clients</span></span>
+          <h2 class="section-title" data-i18n="estimator.title">Simulateur de Mission & Devis Express</h2>
+          <p class="section-desc" data-i18n="estimator.desc">
+            Configurez votre besoin en quelques clics pour obtenir une estimation de la stack recommandée, du mode d'intervention et de la durée.
+          </p>
+        </div>
+
+        <div class="estimator-box">
+          <div class="estimator-controls">
+            <!-- Step 1: Mission Type -->
+            <div class="est-group">
+              <label class="est-label" data-i18n="estimator.step1">1. Type de Projet ou Mission</label>
+              <div class="est-options" id="estProjectType">
+                <button type="button" class="est-opt active" data-type="fullstack" data-base-days="20">
+                  <i data-lucide="layout"></i>
+                  <div>
+                    <strong data-i18n="estimator.t1">App Web Full Stack / SaaS</strong>
+                    <small>React/Next.js + Node/Django + DB</small>
+                  </div>
+                </button>
+                <button type="button" class="est-opt" data-type="ai_llm" data-base-days="12">
+                  <i data-lucide="bot"></i>
+                  <div>
+                    <strong data-i18n="estimator.t2">Intégration IA / Chatbot LLM</strong>
+                    <small>OpenAI, Automation, RAG, API</small>
+                  </div>
+                </button>
+                <button type="button" class="est-opt" data-type="ml_cv" data-base-days="18">
+                  <i data-lucide="brain"></i>
+                  <div>
+                    <strong data-i18n="estimator.t3">Modèle ML / Computer Vision</strong>
+                    <small>PyTorch, TensorFlow, YOLO, FastAPI</small>
+                  </div>
+                </button>
+                <button type="button" class="est-opt" data-type="audit" data-base-days="7">
+                  <i data-lucide="shield-alert"></i>
+                  <div>
+                    <strong data-i18n="estimator.t4">Renfort Senior / Audit / Rescue</strong>
+                    <small>Optimisation Prod, Bug Critique, Formation</small>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Engagement Mode -->
+            <div class="est-group">
+              <label class="est-label" data-i18n="estimator.step2">2. Format de Collaboration souhaité</label>
+              <div class="est-pills" id="estEngagement">
+                <button type="button" class="est-pill active" data-mode="forfait" data-i18n="estimator.m1">Projet au Forfait (Clé en main)</button>
+                <button type="button" class="est-pill" data-mode="regie" data-i18n="estimator.m2">Régie / Renfort Équipe (TJM)</button>
+                <button type="button" class="est-pill" data-mode="parttime" data-i18n="estimator.m3">Consulting / Temps Partiel</button>
+              </div>
+            </div>
+
+            <!-- Step 3: Add-on Features -->
+            <div class="est-group">
+              <label class="est-label" data-i18n="estimator.step3">3. Briques Techniques à inclure</label>
+              <div class="est-checks" id="estAddons">
+                <label class="check-chip">
+                  <input type="checkbox" value="ai_agent" data-days="5" checked />
+                  <span><i data-lucide="sparkles"></i> <span data-i18n="estimator.a1">Module IA / LLM</span></span>
+                </label>
+                <label class="check-chip">
+                  <input type="checkbox" value="api_db" data-days="5" checked />
+                  <span><i data-lucide="database"></i> <span data-i18n="estimator.a2">API REST/GraphQL + DB</span></span>
+                </label>
+                <label class="check-chip">
+                  <input type="checkbox" value="cicd" data-days="3" />
+                  <span><i data-lucide="cloud"></i> <span data-i18n="estimator.a3">Cloud AWS/Vercel & CI/CD</span></span>
+                </label>
+                <label class="check-chip">
+                  <input type="checkbox" value="mlops" data-days="4" />
+                  <span><i data-lucide="activity"></i> <span data-i18n="estimator.a4">MLOps & Drift Monitoring</span></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Estimator Output Summary -->
+          <div class="estimator-result">
+            <div class="result-header">
+              <span class="result-badge" data-i18n="estimator.resBadge">Recommandation Technique</span>
+              <h3 id="estResultTitle">Application Full Stack + IA</h3>
+            </div>
+
+            <div class="result-metrics">
+              <div class="res-box">
+                <span class="res-label" data-i18n="estimator.durationLabel">Durée Estimée</span>
+                <strong class="res-val" id="estDurationVal">3 à 5 semaines</strong>
+              </div>
+              <div class="res-box">
+                <span class="res-label" data-i18n="estimator.availLabel">Démarrage</span>
+                <strong class="res-val text-green" data-i18n="estimator.availVal">Sous 48h</strong>
+              </div>
+            </div>
+
+            <div class="result-stack">
+              <span class="res-label" data-i18n="estimator.stackLabel">Architecture Recommandée :</span>
+              <div class="stack-chips" id="estStackOutput">
+                <span>React / Next.js</span>
+                <span>Node.js / FastAPI</span>
+                <span>PostgreSQL</span>
+                <span>OpenAI API</span>
+                <span>Docker / AWS</span>
+              </div>
+            </div>
+
+            <div class="result-deliverables">
+              <span class="res-label" data-i18n="estimator.delivLabel">Inclus dans chaque livraison :</span>
+              <ul>
+                <li><i data-lucide="check"></i> <span data-i18n="estimator.d1">Code propre, documenté et versionné sur Git/GitHub</span></li>
+                <li><i data-lucide="check"></i> <span data-i18n="estimator.d2">Points de synchro réguliers (FR / EN) adaptés à votre fuseau</span></li>
+                <li><i data-lucide="check"></i> <span data-i18n="estimator.d3">Déploiement en production + transfert de compétences</span></li>
+              </ul>
+            </div>
+
+            <button type="button" id="applyEstimateToContact" class="btn btn-primary btn-block">
+              <i data-lucide="send"></i>
+              <span data-i18n="estimator.cta">Envoyer cette configuration à Yassine</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION TIMELINE -->
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="history"></i> <span data-i18n="exp.tag">Parcours Professionnel & Académique</span></span>
+          <h2 class="section-title" data-i18n="exp.title">Expériences Internationales & Formations</h2>
+        </div>
+
+        <div class="timeline-layout">
+          <!-- Work Experience Column -->
+          <div class="timeline-col">
+            <h3 class="timeline-col-title"><i data-lucide="briefcase"></i> <span data-i18n="exp.workTitle">Expériences Professionnelles</span></h3>
+            <div class="timeline">
+              <!-- Exp 1 -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Mars 2023 – Mai 2025</div>
+                <h4 class="timeline-role">Technical Expert — Full Stack & AI</h4>
+                <div class="timeline-company"><i data-lucide="map-pin"></i> Gloria • États-Unis (Remote)</div>
+                <ul class="timeline-bullets">
+                  <li data-i18n="exp.w1.b1">Analyse de l'architecture existante, optimisation de la performance, structure du code et scalabilité Full Stack.</li>
+                  <li data-i18n="exp.w1.b2">Intégration de fonctionnalités IA à forte valeur ajoutée en production sans régression.</li>
+                  <li data-i18n="exp.w1.b3">Diagnostic et résolution durable de bugs critiques en production avec documentation des causes racines.</li>
+                  <li data-i18n="exp.w1.b4">Coordination quotidienne en anglais technique avec l'équipe américaine malgré le décalage horaire.</li>
+                </ul>
+              </div>
+
+              <!-- Exp 2 -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Depuis 2021</div>
+                <h4 class="timeline-role">Expert en Développement Web & Full Stack / AI — Freelance</h4>
+                <div class="timeline-company"><i data-lucide="map-pin"></i> TGS • Toronto, ON, Canada (Remote)</div>
+                <ul class="timeline-bullets">
+                  <li data-i18n="exp.w2.b1">Réalisation de bout en bout d'applications web (React, Next.js, Vue.js, Node.js/Express, Django/Python).</li>
+                  <li data-i18n="exp.w2.b2">Déploiement de chatbots LLM (OpenAI), pipelines de données et scripts d'automatisation réduisant les coûts opérationnels.</li>
+                  <li data-i18n="exp.w2.b3">Conception d'APIs RESTful sécurisées (JWT/OAuth) et modélisation PostgreSQL, MySQL, MongoDB, Firebase.</li>
+                  <li data-i18n="exp.w2.b4">Mise en place de pipelines CI/CD et déploiement cloud (AWS, Vercel, Render, Heroku) en méthodologie Agile/Scrum.</li>
+                </ul>
+              </div>
+
+              <!-- Exp 3 -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025</div>
+                <h4 class="timeline-role">Machine Learning Engineer</h4>
+                <div class="timeline-company"><i data-lucide="map-pin"></i> DataVision Lab • Casablanca, Maroc</div>
+                <ul class="timeline-bullets">
+                  <li data-i18n="exp.w3.b1">Conception de modèles ML/Deep Learning (TensorFlow, PyTorch) pour la classification et la prédiction.</li>
+                  <li data-i18n="exp.w3.b2">Data cleaning, feature engineering sur datasets volumineux et tuning d'hyperparamètres.</li>
+                  <li data-i18n="exp.w3.b3">Déploiement de modèles via API REST au sein d'applications web (pipelines ML de bout en bout).</li>
+                </ul>
+              </div>
+
+              <!-- Exp 4 -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Depuis 2021</div>
+                <h4 class="timeline-role">Professeur de Développement Web & Full Stack</h4>
+                <div class="timeline-company"><i data-lucide="map-pin"></i> École des Hautes Études d'Ingénierie • Casablanca</div>
+                <ul class="timeline-bullets">
+                  <li data-i18n="exp.w4.b1">Formation sur HTML5/CSS3, JS (ES6+), React, Vue.js, Node.js, Python/Django et PHP.</li>
+                  <li data-i18n="exp.w4.b2">Encadrement de projets réels de A à Z, Clean Code, architecture MVC, Git et revues de code.</li>
+                </ul>
+              </div>
+
+              <!-- Exp 5 -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024</div>
+                <h4 class="timeline-role">Data Science / Machine Learning Intern</h4>
+                <div class="timeline-company"><i data-lucide="map-pin"></i> LLS • Remote</div>
+                <ul class="timeline-bullets">
+                  <li data-i18n="exp.w5.b1">Analyse exploratoire (EDA) avec Pandas, Matplotlib, Seaborn et modèles supervisés évalués (Accuracy, F1-score).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education & Soft Skills Column -->
+          <div class="timeline-col">
+            <h3 class="timeline-col-title"><i data-lucide="graduation-cap"></i> <span data-i18n="exp.eduTitle">Diplômes & Formations</span></h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021 – 2026</div>
+                <h4 class="timeline-role" data-i18n="exp.e1.title">Diplôme d'Ingénieur Informatique</h4>
+                <div class="timeline-company">EHEI • Oujda, Maroc</div>
+                <p class="timeline-note" data-i18n="exp.e1.desc">Spécialisation en Génie Logiciel, Architectures Web distribuées, Intelligence Artificielle & Machine Learning.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021 – 2023</div>
+                <h4 class="timeline-role" data-i18n="exp.e2.title">Classes Préparatoires Intégrées (CPI)</h4>
+                <div class="timeline-company">EHEI • Oujda, Maroc</div>
+                <p class="timeline-note" data-i18n="exp.e2.desc">Mathématiques appliquées, algorithmique avancée et bases de l'ingénierie informatique.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021</div>
+                <h4 class="timeline-role" data-i18n="exp.e3.title">Baccalauréat Scientifique</h4>
+                <div class="timeline-company">Lycée Ezzarktouni • Oujda, Maroc</div>
+              </div>
+            </div>
+
+            <!-- Languages & Soft Skills Card -->
+            <div class="soft-card">
+              <h4 data-i18n="exp.langTitle"><i data-lucide="languages"></i> Langues de Travail</h4>
+              <div class="lang-bars">
+                <div class="lang-row">
+                  <span>Français <small>(Bilingue / Professionnel)</small></span>
+                  <div class="bar"><div class="fill" style="width: 98%"></div></div>
+                </div>
+                <div class="lang-row">
+                  <span>English <small>(Technical & US/CA Remote)</small></span>
+                  <div class="bar"><div class="fill" style="width: 92%"></div></div>
+                </div>
+                <div class="lang-row">
+                  <span>Español <small>(Courant)</small></span>
+                  <div class="bar"><div class="fill" style="width: 85%"></div></div>
+                </div>
+              </div>
+
+              <h4 class="mt-4" data-i18n="exp.softTitle"><i data-lucide="heart-handshake"></i> Atouts Freelance & Soft Skills</h4>
+              <div class="soft-pills">
+                <span><i data-lucide="check"></i> Autonome en Remote</span>
+                <span><i data-lucide="check"></i> Rigueur en Production</span>
+                <span><i data-lucide="check"></i> Communication Claire (Pédagogue)</span>
+                <span><i data-lucide="check"></i> Esprit d'Équipe Agile/Scrum</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="terminal"></i> <span data-i18n="skills.tag">Compétences Techniques</span></span>
+          <h2 class="section-title" data-i18n="skills.title">Stack Technologique Complète</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-box">
+            <div class="skill-box-head">
+              <i data-lucide="monitor"></i>
+              <h3>Front-End Moderne</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag-hot">React.js</span>
+              <span class="tag-hot">Next.js</span>
+              <span class="tag-hot">TypeScript</span>
+              <span>Vue.js</span>
+              <span>JavaScript (ES6+)</span>
+              <span>HTML5 / CSS3</span>
+              <span>Responsive & A11y</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-box-head">
+              <i data-lucide="server"></i>
+              <h3>Back-End & Architecture</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag-hot">Node.js / Express</span>
+              <span class="tag-hot">Python / Django</span>
+              <span class="tag-hot">FastAPI / Flask</span>
+              <span>API RESTful</span>
+              <span>GraphQL</span>
+              <span>Microservices</span>
+              <span>JWT / OAuth2</span>
+              <span>PHP / MVC</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-box-head">
+              <i data-lucide="sparkles"></i>
+              <h3>IA, Deep Learning & ML</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag-hot">Intégration LLM / OpenAI</span>
+              <span class="tag-hot">Chatbots & Automatisation IA</span>
+              <span class="tag-hot">PyTorch & TensorFlow</span>
+              <span>Deep Learning (CNN, RNN)</span>
+              <span>YOLO Object Detection</span>
+              <span>Scikit-Learn / Pandas</span>
+              <span>Feature Engineering</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-box-head">
+              <i data-lucide="cloud-cog"></i>
+              <h3>Bases de Données, Cloud & MLOps</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag-hot">PostgreSQL & MySQL</span>
+              <span class="tag-hot">MongoDB & Firebase</span>
+              <span class="tag-hot">Docker & CI/CD</span>
+              <span>AWS / Vercel / Render</span>
+              <span>MLOps & MLflow</span>
+              <span>Model Monitoring & Drift Detection</span>
+              <span>Git / GitHub / Jira</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & DIRECT BRIEF SECTION -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-info">
+            <span class="section-tag"><i data-lucide="send"></i> <span data-i18n="contact.tag">Prêt à collaborer ?</span></span>
+            <h2 class="contact-title" data-i18n="contact.title">Discutons de votre prochain projet ou mission Freelance</h2>
+            <p class="contact-desc" data-i18n="contact.desc">
+              Réponse garantie sous moins de 24h. Disponible pour des missions Freelance, des contrats à distance (USA, Canada, Europe, Maroc) ou du consulting technique.
+            </p>
+
+            <div class="contact-direct-list">
+              <div class="direct-item">
+                <div class="direct-icon"><i data-lucide="mail"></i></div>
+                <div>
+                  <small>Email Professionnel</small>
+                  <strong>imparyassine@gmail.com</strong>
+                </div>
+                <button class="copy-btn" id="copyEmailContact" data-copy="imparyassine@gmail.com">
+                  <i data-lucide="copy"></i> <span data-i18n="contact.copy">Copier</span>
+                </button>
+              </div>
+
+              <div class="direct-item">
+                <div class="direct-icon"><i data-lucide="phone"></i></div>
+                <div>
+                  <small>Téléphone & WhatsApp</small>
+                  <strong>+212 637-248325</strong>
+                </div>
+                <a href="https://wa.me/212637248325" target="_blank" rel="noopener" class="copy-btn">
+                  <i data-lucide="external-link"></i> WhatsApp
+                </a>
+              </div>
+
+              <div class="direct-item">
+                <div class="direct-icon"><i data-lucide="map-pin"></i></div>
+                <div>
+                  <small data-i18n="contact.locLabel">Localisation & Mobilité</small>
+                  <strong data-i18n="contact.locVal">Casablanca, Maroc • Remote International (Permis B)</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Smart Brief Form (Generates Ready-to-Send Email or WhatsApp Message) -->
+          <form class="contact-form" id="briefForm">
+            <h3 data-i18n="contact.formTitle">Envoyer un Brief Rapide</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientName" data-i18n="contact.fName">Votre Nom / Entreprise</label>
+                <input type="text" id="clientName" required placeholder="Ex: Sarah Connor / TechCorp USA" />
+              </div>
+              <div class="form-group">
+                <label for="clientEmail" data-i18n="contact.fEmail">Votre Email</label>
+                <input type="email" id="clientEmail" required placeholder="sarah@company.com" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="missionType" data-i18n="contact.fMission">Type de Besoin</label>
+              <select id="missionType">
+                <option value="Développement Full Stack Web / SaaS">Développement Full Stack Web / SaaS</option>
+                <option value="Intégration IA / Chatbot LLM / Automatisation">Intégration IA / Chatbot LLM / Automatisation</option>
+                <option value="Machine Learning / Computer Vision / MLOps">Machine Learning / Computer Vision / MLOps</option>
+                <option value="Renfort d'Équipe Senior (Régie / Freelance Remote)">Renfort d'Équipe Senior (Régie / Freelance Remote)</option>
+                <option value="Audit Technique / Résolution de Bugs Prod / Formation">Audit Technique / Résolution de Bugs Prod / Formation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="clientMessage" data-i18n="contact.fMsg">Détails du projet, stack ou planning</label>
+              <textarea id="clientMessage" rows="4" required placeholder="Bonjour Yassine, nous cherchons un expert Full Stack & IA pour..."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">
+                <i data-lucide="mail"></i>
+                <span data-i18n="contact.sendEmail">Envoyer par Email</span>
+              </button>
+              <button type="button" id="sendViaWhatsapp" class="btn btn-whatsapp">
+                <i data-lucide="message-circle"></i>
+                <span data-i18n="contact.sendWa">Envoyer sur WhatsApp</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand-logo">YC</div>
+        <p>© 2026 <strong>Yassine Chani</strong> — Expert Full Stack Developer & AI Engineer.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#projects">Projets</a>
+        <a href="#estimator">Simulateur</a>
+        <button id="openResumeFooter" class="link-btn">CV Imprimable</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING AI RECRUITER ASSISTANT WIDGET -->
+  <div class="ai-assistant" id="aiAssistant">
+    <button class="ai-fab" id="aiToggleBtn" aria-label="Ouvrir l'assistant IA de Yassine">
+      <i data-lucide="bot"></i>
+      <span class="ai-fab-text" data-i18n="ai.fab">Question Recruteur ? Ask Yassine's AI</span>
+    </button>
+
+    <div class="ai-window" id="aiWindow" hidden>
+      <div class="ai-header">
+        <div class="ai-header-info">
+          <div class="ai-avatar"><i data-lucide="sparkles"></i></div>
+          <div>
+            <strong>Assistant IA de Yassine</strong>
+            <small>Répond instantanément aux recruteurs</small>
+          </div>
+        </div>
+        <button id="aiCloseBtn" class="ai-close" aria-label="Fermer"><i data-lucide="x"></i></button>
+      </div>
+
+      <div class="ai-messages" id="aiMessages">
+        <div class="ai-msg bot">
+          Bonjour 👋 Je suis l'assistant IA du portfolio de <strong>Yassine Chani</strong>. Posez-moi une question sur son expérience (Gloria USA, TGS Canada), sa stack Full Stack & IA, ou sa disponibilité freelance !
+        </div>
+      </div>
+
+      <div class="ai-QuickPrompts" id="aiQuickPrompts">
+        <button type="button" data-q="availability">Disponibilité & Remote ?</button>
+        <button type="button" data-q="ai_exp">Expérience en IA / LLM ?</button>
+        <button type="button" data-q="us_exp">Missions USA & Canada ?</button>
+        <button type="button" data-q="stack">Stack principale ?</button>
+      </div>
+
+      <form class="ai-input-bar" id="aiForm">
+        <input type="text" id="aiInput" placeholder="Ex: Quelle est son expérience avec React et Python ?" autocomplete="off" />
+        <button type="submit" aria-label="Envoyer"><i data-lucide="send"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- EXECUTIVE RESUME / CV MODAL (Printable One-Pager for Recruiters) -->
+  <div class="modal-backdrop" id="resumeModal" hidden>
+    <div class="modal-content">
+      <div class="modal-toolbar">
+        <div class="modal-title">
+          <i data-lucide="file-check-2"></i>
+          <span>CV Exécutif — Yassine Chani (Version Recruteur)</span>
+        </div>
+        <div class="modal-actions">
+          <button id="printResumeBtn" class="btn btn-primary btn-sm">
+            <i data-lucide="printer"></i> Imprimer / Enregistrer en PDF
+          </button>
+          <button id="closeResumeModal" class="icon-chip"><i data-lucide="x"></i></button>
+        </div>
+      </div>
+
+      <div class="resume-sheet" id="printableResume">
+        <div class="res-head">
+          <div>
+            <h1>Yassine Chani</h1>
+            <h2>Expert en Développement Web Full Stack & Ingénieur IA / Machine Learning</h2>
+            <p>+5 ans d'expérience Front-End, Back-End, Architecture Scalable & Déploiement IA en Production (USA, Canada, Maroc)</p>
+          </div>
+          <div class="res-contact">
+            <div>imparyassine@gmail.com</div>
+            <div>+212 637-248325</div>
+            <div>Casablanca, Maroc (Permis B)</div>
+            <div>FR • EN • ES</div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="res-section">
+          <h3>Compétences Clés</h3>
+          <div class="res-skills-grid">
+            <div><strong>Front-End :</strong> JavaScript (ES6+), TypeScript, React.js, Next.js, Vue.js, HTML5/CSS3</div>
+            <div><strong>Back-End :</strong> Node.js/Express, Python/Django, FastAPI, Flask, PHP, API RESTful & GraphQL, Microservices</div>
+            <div><strong>IA & Machine Learning :</strong> Intégration LLM (OpenAI), Chatbots, Automatisation IA, PyTorch, TensorFlow, Deep Learning (CNN, RNN, YOLO), Scikit-Learn, Feature Engineering</div>
+            <div><strong>DB, Cloud & MLOps :</strong> PostgreSQL, MySQL, MongoDB, Firebase, Docker, CI/CD, AWS, Vercel, MLflow, Model Monitoring & Drift Detection</div>
+          </div>
+        </div>
+
+        <div class="res-section">
+          <h3>Expériences Professionnelles</h3>
+          <div class="res-job">
+            <div class="res-job-head">
+              <strong>Technical Expert — Gloria (États-Unis, à distance)</strong>
+              <span>Mars 2023 – Mai 2025</span>
+            </div>
+            <ul>
+              <li>Développement et optimisation Full Stack (performance, scalabilité, architecture) sur l'ensemble du cycle produit.</li>
+              <li>Intégration de fonctionnalités IA en production sans régression et définition de cas d'usage IA à forte valeur ajoutée.</li>
+              <li>Résolution de bugs critiques en production avec documentation des causes racines et coordination en anglais avec l'équipe US.</li>
+            </ul>
+          </div>
+
+          <div class="res-job">
+            <div class="res-job-head">
+              <strong>Expert en Développement Web & Full Stack Developer / AI (Freelance) — TGS (Toronto, Canada)</strong>
+              <span>Depuis 2021</span>
+            </div>
+            <ul>
+              <li>Conception de bout en bout d'applications web (React, Next.js, Vue.js, Node.js, Django) et d'APIs REST sécurisées (JWT/OAuth).</li>
+              <li>Déploiement de chatbots LLM, pipelines d'analyse de données et scripts d'automatisation métier.</li>
+              <li>Gestion des bases PostgreSQL, MySQL, MongoDB, Firebase et déploiement CI/CD sur AWS, Vercel, Render, Heroku.</li>
+            </ul>
+          </div>
+
+          <div class="res-job">
+            <div class="res-job-head">
+              <strong>Machine Learning Engineer — DataVision Lab (Casablanca, Maroc)</strong>
+              <span>2025</span>
+            </div>
+            <ul>
+              <li>Développement de modèles ML & Deep Learning (TensorFlow, PyTorch), feature engineering et déploiement via API REST.</li>
+            </ul>
+          </div>
+
+          <div class="res-job">
+            <div class="res-job-head">
+              <strong>Professeur de Développement Web & Full Stack — École des Hautes Études d'Ingénierie (Casablanca)</strong>
+              <span>Depuis 2021</span>
+            </div>
+            <ul>
+              <li>Enseignement Front/Back (React, Vue, Node, Django), encadrement de projets de A à Z, Clean Code, MVC et workflows Git.</li>
+            </ul>
+          </div>
+
+          <div class="res-job">
+            <div class="res-job-head">
+              <strong>Data Science / ML Intern — LLS (Remote) & Projets IA (YOLO/CNN & Système de Recommandation)</strong>
+              <span>2024 – 2025</span>
+            </div>
+            <ul>
+              <li>EDA (Pandas, Seaborn), modèles supervisés, système de recommandation hybride (Scikit-Learn) et détection d'objets YOLO/CNN.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="res-section">
+          <h3>Diplômes et Formations</h3>
+          <div class="res-edu">
+            <div><strong>Ingénieur Informatique</strong> — EHEI Oujda, Maroc (2021 – 2026)</div>
+            <div><strong>Classes Préparatoires Intégrées (CPI)</strong> — EHEI Oujda (2021 – 2023) | <strong>Baccalauréat</strong> — Ezzarktouni Oujda (2021)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
